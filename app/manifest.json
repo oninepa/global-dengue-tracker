@@ -1,0 +1,21 @@
+{
+    "name": "Bangdeng - 방글라데시 댕기열 정보 지도",
+    "short_name": "Bangdeng",
+    "description": "방글라데시 지역의 댕기열 백신 접종 병원과 약국 위치를 보여주는 지도",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4285f4",
+    "icons": [
+        {
+            "src": "img/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

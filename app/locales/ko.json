@@ -1,0 +1,15 @@
+{
+    "app_name": "방뎅 - 방글라데시 댕기열 정보 지도",
+    "map_view": "지도 보기",
+    "list_view": "목록 보기",
+    "vaccine_centers": "백신 접종 센터",
+    "pharmacies": "약국",
+    "free_dispensaries": "무료 배급소",
+    "show_all": "모두 보기",
+    "address": "주소",
+    "contact": "연락처",
+    "loading": "로딩 중...",
+    "offline_message": "오프라인 상태입니다. 일부 기능이 제한될 수 있습니다.",
+    "search_placeholder": "위치 검색...",
+    "no_results": "검색 결과가 없습니다"
+}

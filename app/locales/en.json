@@ -1,0 +1,15 @@
+{
+    "app_name": "Bangdeng - Dengue Information Map",
+    "map_view": "Map View",
+    "list_view": "List View",
+    "vaccine_centers": "Vaccine Centers",
+    "pharmacies": "Pharmacies",
+    "free_dispensaries": "Free Dispensaries",
+    "show_all": "Show All",
+    "address": "Address",
+    "contact": "Contact",
+    "loading": "Loading...",
+    "offline_message": "You are offline. Some features may be limited.",
+    "search_placeholder": "Search for locations...",
+    "no_results": "No results found"
+}

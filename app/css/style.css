@@ -1,0 +1,129 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #4285f4;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-selector button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.language-selector button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 메인 콘텐츠 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.map-container {
+    height: 60vh;
+    min-height: 300px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* 필터 버튼 */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.filter-container button {
+    background-color: #f1f3f4;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.filter-container button.active {
+    background-color: #4285f4;
+    color: white;
+}
+
+/* 위치 목록 */
+.location-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-item {
+    border-bottom: 1px solid #eee;
+    padding: 0.8rem 0;
+}
+
+.location-item:last-child {
+    border-bottom: none;
+}
+
+.location-name {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.location-address, .location-contact {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.loading {
+    text-align: center;
+    color: #777;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f3f4;
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .map-container {
+        height: 50vh;
+    }
+}
