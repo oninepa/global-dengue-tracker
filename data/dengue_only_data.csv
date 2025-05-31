@@ -1,0 +1,70 @@
+name,address,lat,lng,type
+Dhaka EPI Dengue Center,"Dhaka, Bangladesh",23.803946,90.392043,vaccine
+Dhaka Immunization Clinic,"Dhaka, Bangladesh",23.808343,90.418543,vaccine
+Dengue Prevention Center Dhaka,"Dhaka, Bangladesh",23.837245,90.420423,vaccine
+Dhaka Dengue Vaccination Center,"Dhaka, Bangladesh",23.814766,90.401802,vaccine
+Dhaka Dengue Diagnostic Lab,"Dhaka, Bangladesh",23.818281,90.414615,blood_test
+Dengue Detection Lab Dhaka,"Dhaka, Bangladesh",23.826801,90.389992,blood_test
+Dhaka Fever Diagnostic Center,"Dhaka, Bangladesh",23.811737,90.402852,blood_test
+Dengue Relief Center Dhaka,"Dhaka, Bangladesh",23.804806,90.426163,aid
+Dengue Relief Center Dhaka,"Dhaka, Bangladesh",23.811216,90.43335,aid
+Dhaka Community Dengue Care,"Dhaka, Bangladesh",23.822871,90.43031,aid
+Dengue Surveillance Unit Dhaka,"Dhaka, Bangladesh",23.800294,90.421969,hospital
+Dhaka Dengue Control Center,"Dhaka, Bangladesh",23.798198,90.396134,pharmacy
+Dhaka Dengue Control Center,"Dhaka, Bangladesh",23.799576,90.436403,vaccine
+Chittagong EPI Dengue Center,"Chittagong, Bangladesh",22.356864,91.762107,vaccine
+Chittagong Immunization Clinic,"Chittagong, Bangladesh",22.345027,91.786685,vaccine
+Dengue Prevention Center Chittagong,"Chittagong, Bangladesh",22.363838,91.778966,vaccine
+Dengue Prevention Center Chittagong,"Chittagong, Bangladesh",22.374501,91.790776,vaccine
+Dengue Detection Lab Chittagong,"Chittagong, Bangladesh",22.348751,91.793722,blood_test
+Dengue Blood Test Center Chittagong,"Chittagong, Bangladesh",22.382704,91.754132,blood_test
+Dengue Detection Lab Chittagong,"Chittagong, Bangladesh",22.335194,91.811468,blood_test
+Dengue Blood Test Center Chittagong,"Chittagong, Bangladesh",22.341642,91.783631,blood_test
+Chittagong Free Dengue Clinic,"Chittagong, Bangladesh",22.327282,91.774925,aid
+Dengue Relief Center Chittagong,"Chittagong, Bangladesh",22.371392,91.781107,aid
+Chittagong Community Dengue Care,"Chittagong, Bangladesh",22.372011,91.766276,aid
+Chittagong Free Dengue Clinic,"Chittagong, Bangladesh",22.342967,91.778746,aid
+Dengue Surveillance Unit Chittagong,"Chittagong, Bangladesh",22.362628,91.771831,hospital
+Dengue Surveillance Unit Chittagong,"Chittagong, Bangladesh",22.360616,91.799925,pharmacy
+Chittagong Dengue Control Center,"Chittagong, Bangladesh",22.346532,91.807795,vaccine
+Dengue Prevention Center Sylhet,"Sylhet, Bangladesh",24.922251,91.845672,vaccine
+Sylhet Dengue Vaccination Center,"Sylhet, Bangladesh",24.919617,91.849354,vaccine
+Sylhet Immunization Clinic,"Sylhet, Bangladesh",24.891521,91.880675,vaccine
+Dengue Blood Test Center Sylhet,"Sylhet, Bangladesh",24.880558,91.844158,blood_test
+Sylhet Dengue Diagnostic Lab,"Sylhet, Bangladesh",24.870454,91.881695,blood_test
+Dengue Blood Test Center Sylhet,"Sylhet, Bangladesh",24.903076,91.89077,blood_test
+Sylhet Free Dengue Clinic,"Sylhet, Bangladesh",24.885231,91.863624,aid
+Sylhet Free Dengue Clinic,"Sylhet, Bangladesh",24.907368,91.8799,aid
+Sylhet Community Dengue Care,"Sylhet, Bangladesh",24.881979,91.892311,aid
+Dengue Emergency Center Sylhet,"Sylhet, Bangladesh",24.902743,91.869635,vaccine
+Dengue Surveillance Unit Sylhet,"Sylhet, Bangladesh",24.914582,91.8879,blood_test
+Dengue Surveillance Unit Sylhet,"Sylhet, Bangladesh",24.908575,91.864492,aid
+Dengue Emergency Center Sylhet,"Sylhet, Bangladesh",24.903071,91.882506,hospital
+Rajshahi EPI Dengue Center,"Rajshahi, Bangladesh",24.389668,88.579123,vaccine
+Rajshahi Dengue Vaccination Center,"Rajshahi, Bangladesh",24.365217,88.589415,vaccine
+Dengue Prevention Center Rajshahi,"Rajshahi, Bangladesh",24.366602,88.574562,vaccine
+Rajshahi Fever Diagnostic Center,"Rajshahi, Bangladesh",24.400634,88.583616,blood_test
+Rajshahi Dengue Diagnostic Lab,"Rajshahi, Bangladesh",24.364754,88.620658,blood_test
+Dengue Blood Test Center Rajshahi,"Rajshahi, Bangladesh",24.390354,88.591309,blood_test
+Rajshahi Dengue Diagnostic Lab,"Rajshahi, Bangladesh",24.366014,88.622481,blood_test
+Free Dengue Treatment Rajshahi,"Rajshahi, Bangladesh",24.369291,88.577961,aid
+Free Dengue Treatment Rajshahi,"Rajshahi, Bangladesh",24.381997,88.609527,aid
+Rajshahi Community Dengue Care,"Rajshahi, Bangladesh",24.404075,88.632815,aid
+Rajshahi Dengue Response Team,"Rajshahi, Bangladesh",24.347746,88.587531,pharmacy
+Dengue Emergency Center Rajshahi,"Rajshahi, Bangladesh",24.353064,88.595512,vaccine
+Rajshahi Dengue Control Center,"Rajshahi, Bangladesh",24.390964,88.59969,blood_test
+Dengue Emergency Center Rajshahi,"Rajshahi, Bangladesh",24.39719,88.598058,aid
+Khulna Dengue Vaccination Center,"Khulna, Bangladesh",22.869756,89.53746,vaccine
+Khulna EPI Dengue Center,"Khulna, Bangladesh",22.835123,89.538551,vaccine
+Khulna Dengue Vaccination Center,"Khulna, Bangladesh",22.844854,89.557345,vaccine
+Khulna Dengue Diagnostic Lab,"Khulna, Bangladesh",22.847982,89.510382,blood_test
+Khulna Fever Diagnostic Center,"Khulna, Bangladesh",22.868496,89.566446,blood_test
+Khulna Dengue Diagnostic Lab,"Khulna, Bangladesh",22.845273,89.512588,blood_test
+Dengue Blood Test Center Khulna,"Khulna, Bangladesh",22.861205,89.518581,blood_test
+Khulna Free Dengue Clinic,"Khulna, Bangladesh",22.856902,89.532976,aid
+Khulna Community Dengue Care,"Khulna, Bangladesh",22.834501,89.532691,aid
+Free Dengue Treatment Khulna,"Khulna, Bangladesh",22.835728,89.52675,aid
+Dengue Relief Center Khulna,"Khulna, Bangladesh",22.833105,89.514299,aid
+Dengue Emergency Center Khulna,"Khulna, Bangladesh",22.816613,89.553459,pharmacy
+Dengue Surveillance Unit Khulna,"Khulna, Bangladesh",22.85049,89.535571,vaccine
+Khulna Dengue Response Team,"Khulna, Bangladesh",22.83545,89.529305,blood_test

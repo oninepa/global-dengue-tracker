@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Dengue Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Cluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+    
+    <link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="header-content">
+            <h1 data-translate="app_title">Global Dengue Tracker</h1>
+            
+            <!-- 국가 선택 -->
+            <div class="country-selector">
+                <select id="countrySelect">
+                    <option value="bangladesh">🇧🇩 Bangladesh</option>
+                    <option value="nigeria">🇳🇬 Nigeria</option>
+                    <option value="brazil">🇧🇷 Brazil</option>
+                    <option value="thailand">🇹🇭 Thailand</option>
+                    <option value="indonesia">🇮🇩 Indonesia</option>
+                    <option value="philippines">🇵🇭 Philippines</option>
+                    <option value="india">🇮🇳 India</option>
+                    <option value="vietnam">🇻🇳 Vietnam</option>
+                    <option value="malaysia">🇲🇾 Malaysia</option>
+                    <option value="sri_lanka">🇱🇰 Sri Lanka</option>
+                </select>
+            </div>
+            
+            <!-- 언어 선택 -->
+            <div class="language-selector">
+                <button data-lang="en" class="lang-btn active">EN</button>
+                <button data-lang="local" class="lang-btn" id="localLangBtn">বাং</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <!-- 국가 정보 표시 -->
+        <div class="country-info">
+            <h2 id="currentCountryName">Bangladesh</h2>
+            <p data-translate="country_desc">Dengue fever prevention facilities</p>
+        </div>
+
+        <!-- 필터 버튼 -->
+        <div class="filter-container">
+            <button data-filter="all" class="filter-btn active" data-translate="filter_all">All</button>
+            <button data-filter="vaccine" class="filter-btn" data-translate="filter_vaccine">💉 Vaccination</button>
+            <button data-filter="blood_test" class="filter-btn" data-translate="filter_blood">🩸 Blood Test</button>
+            <button data-filter="aid" class="filter-btn" data-translate="filter_aid">⛑️ Free Clinic</button>
+            <button data-filter="dengue_center" class="filter-btn" data-translate="filter_center">🏥 Dengue Center</button>
+        </div>
+
+        <!-- 지도 컨테이너 -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- 로딩 표시 -->
+        <div id="loading" class="loading">
+            <p data-translate="loading">Loading facilities...</p>
+        </div>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Cluster JS -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <!-- Firebase -->
+    <script src="js/firebase-app-compat.js"></script>
+    <script src="js/firebase-firestore-compat.js"></script>
+    <!-- 메인 앱 -->
+    <script src="app/js/global-app.js"></script>
+</body>
+</html>

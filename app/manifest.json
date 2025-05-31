@@ -1,21 +1,19 @@
 {
-    "name": "Bangdeng - 방글라데시 댕기열 정보 지도",
-    "short_name": "Bangdeng",
-    "description": "방글라데시 지역의 댕기열 백신 접종 병원과 약국 위치를 보여주는 지도",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4285f4",
-    "icons": [
-        {
-            "src": "img/icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "img/icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "name": "Bangdeng - 댕기열 정보 지도",
+  "short_name": "Bangdeng",
+  "description": "방글라데시 댕기열 백신 및 약국 위치 정보",
+  "start_url": "../index.html", // manifest.json이 app 폴더에 있으므로, 시작 URL은 상위 폴더의 index.html
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4",
+  "icons": [
+  {"src": "icons/icon-72x72.png", "sizes": "72x72", "type": "image/png"},
+  {"src": "icons/icon-96x96.png", "sizes": "96x96", "type": "image/png"},
+  {"src": "icons/icon-128x128.png", "sizes": "128x128", "type": "image/png"},
+  {"src": "icons/icon-144x144.png", "sizes": "144x144", "type": "image/png"},
+  {"src": "icons/icon-152x152.png", "sizes": "152x152", "type": "image/png"},
+  {"src": "icons/icon-192x192.png", "sizes": "192x192", "type": "image/png"},
+  {"src": "icons/icon-384x384.png", "sizes": "384x384", "type": "image/png"},
+  {"src": "icons/icon-512x512.png", "sizes": "512x512", "type": "image/png"}
+]
 }

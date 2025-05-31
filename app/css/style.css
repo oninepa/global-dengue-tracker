@@ -45,7 +45,7 @@ main {
 
 .map-container {
     height: 60vh;
-    min-height: 300px;
+    min-height: 80px;
     margin-bottom: 1rem;
     border-radius: 8px;
     overflow: hidden;
@@ -78,6 +78,24 @@ main {
     background-color: #4285f4;
     color: white;
 }
+
+/* 커스텀 마커 스타일 */
+.custom-marker {
+    background: white;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hospital-marker { border-color: #e74c3c; }
+.pharmacy-marker { border-color: #3498db; }
+.vaccine-marker { border-color: #2ecc71; }
+.blood-marker { border-color: #9b59b6; }
+.aid-marker { border-color: #f39c12; }
 
 /* 위치 목록 */
 .location-list {
@@ -125,5 +143,68 @@ footer {
 @media (max-width: 768px) {
     .map-container {
         height: 50vh;
+    }
+}
+/* 기존 스타일에 추가 */
+
+/* 헤더 개선 */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* 국가 선택 */
+.country-selector select {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.country-selector select option {
+    background: #4285f4;
+    color: white;
+}
+
+/* 국가 정보 */
+.country-info {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.country-info h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* 로딩 */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    display: none;
+}
+
+/* 언어 버튼 개선 */
+.lang-btn.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 반응형 헤더 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .country-selector,
+    .language-selector {
+        margin: 0.5rem 0;
     }
 }
