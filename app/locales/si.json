@@ -1,0 +1,19 @@
+{
+  "app_title": "ගෝලීය ඩෙංගු ට්‍රැකර්",
+  "country_desc": "ඩෙංගු උණ වැළැක්වීමේ පහසුකම්",
+  "filter_all": "සියල්ල",
+  "filter_vaccine": "එන්නත් කිරීම",
+  "filter_blood": "රුධිර පරීක්ෂණ",
+  "filter_aid": "නොමිලේ සායන",
+  "filter_center": "ඩෙංගු මධ්‍යස්ථානය",
+  "loading": "පහසුකම් පූරණය වෙමින්...",
+  "report_title": "ඩෙංගු සම්බන්ධ ස්ථාන බෙදා ගන්න",
+  "email": "ඊමේල්",
+  "country": "රට",
+  "facility_type": "පහසුකම් වර්ගය",
+  "description": "විස්තරය",
+  "description_placeholder": "කරුණාකර ස්ථානය, ලිපිනය සහ සේවා විස්තර කරන්න...",
+  "attachment": "ඇමුණුම",
+  "submit_report": "වාර්තාව ඉදිරිපත් කරන්න",
+  "select_country": "රට තෝරන්න"
+}

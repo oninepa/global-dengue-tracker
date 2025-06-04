@@ -1,0 +1,19 @@
+{
+  "app_title": "Rastreador Global de Dengue",
+  "country_desc": "Instalações de prevenção da dengue",
+  "filter_all": "Todos",
+  "filter_vaccine": "Vacinação",
+  "filter_blood": "Exame de Sangue",
+  "filter_aid": "Clínica Gratuita",
+  "filter_center": "Centro de Dengue",
+  "loading": "Carregando instalações...",
+  "report_title": "Compartilhar Local Relacionado à Dengue",
+  "email": "Email",
+  "country": "País",
+  "facility_type": "Tipo de Instalação",
+  "description": "Descrição",
+  "description_placeholder": "Por favor, descreva o local, endereço e serviços...",
+  "attachment": "Anexo",
+  "submit_report": "Enviar Relatório",
+  "select_country": "Selecionar País"
+}

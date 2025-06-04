@@ -1,12 +1,13 @@
 {
   "app_title": "Global Dengue Tracker",
-  "country_desc": "Dengue fever prevention facilities",
-  "filter_all": "All",
-  "filter_vaccine": "Vaccination",
-  "filter_blood": "Blood Test",
-  "filter_aid": "Free Clinic",
-  "filter_center": "Dengue Center",
-  "loading": "Loading facilities...",
+  "country_desc": "Ol ples bilong stopim dengue sik",
+  "filter_all": "Olgeta",
+  "filter_vaccine": "Sukim marasin",
+  "filter_blood": "Lukautim blut",
+  "filter_aid": "Fri klinik",
+  "filter_center": "Dengue Sentah",
+  "loading": "Redi long ol ples...",
+
   "report_title": "Share Dengue-Related Location",
   "email": "Email",
   "country": "Country",
@@ -17,11 +18,3 @@
   "submit_report": "Submit Report",
   "select_country": "Select Country"
 }
-
-
-
-
-
-
-
-

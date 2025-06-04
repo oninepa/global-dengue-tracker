@@ -18,68 +18,254 @@
     <!-- 헤더 -->
     <header>
         <div class="header-content">
+            <div class="header-controls">
+                <div class="country-selector">
+                    <select id="countrySelect">
+                        <option value="bangladesh">🇧🇩 Bangladesh</option>
+                        <option value="thailand">🇹🇭 Thailand</option>
+                        <option value="vietnam">🇻🇳 Vietnam</option>
+                        <option value="indonesia">🇮🇩 Indonesia</option>
+                        <option value="philippines">🇵🇭 Philippines</option>
+                        <option value="malaysia">🇲🇾 Malaysia</option>
+                        <option value="singapore">🇸🇬 Singapore</option>
+                        <option value="laos">🇱🇦 Laos</option>
+                        <option value="cambodia">🇰🇭 Cambodia</option>
+                        <option value="myanmar">🇲🇲 Myanmar</option>
+                        <option value="india">🇮🇳 India</option>
+                        <option value="sri_lanka">🇱🇰 Sri Lanka</option>
+                        <option value="pakistan">🇵🇰 Pakistan</option>
+                        <option value="brazil">🇧🇷 Brazil</option>
+                        <option value="colombia">🇨🇴 Colombia</option>
+                        <option value="venezuela">🇻🇪 Venezuela</option>
+                        <option value="peru">🇵🇪 Peru</option>
+                        <option value="ecuador">🇪🇨 Ecuador</option>
+                        <option value="mexico">🇲🇽 Mexico</option>
+                        <option value="argentina">🇦🇷 Argentina</option>
+                        <option value="nigeria">🇳🇬 Nigeria</option>
+                        <option value="kenya">🇰🇪 Kenya</option>
+                        <option value="tanzania">🇹🇿 Tanzania</option>
+                        <option value="uganda">🇺🇬 Uganda</option>
+                        <option value="australia">🇦🇺 Australia</option>
+                        <option value="fiji">🇫🇯 Fiji</option>
+                        <option value="papua_new_guinea">🇵🇬 Papua New Guinea</option>
+                    </select>
+                </div>
+                
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ko">🇰🇷 한국어</option>
+                        <option value="bn">🇧🇩 বাংলা</option>
+                        <option value="th">🇹🇭 ไทย</option>
+                        <option value="vi">🇻🇳 Tiếng Việt</option>
+                        <option value="id">🇮🇩 Bahasa Indonesia</option>
+                        <option value="tl">🇵🇭 Filipino</option>
+                        <option value="ms">🇲🇾 Bahasa Melayu</option>
+                        <option value="zh">🇸🇬 中文</option>
+                        <option value="lo">🇱🇦 ລາວ</option>
+                        <option value="km">🇰🇭 ខ្មែរ</option>
+                        <option value="my">🇲🇲 မြန်မာ</option>
+                        <option value="hi">🇮🇳 हिन्दी</option>
+                        <option value="si">🇱🇰 සිංහල</option>
+                        <option value="ur">🇵🇰 اردو</option>
+                        <option value="pt">🇧🇷 Português</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="ha">🇳🇬 Hausa</option>
+                        <option value="sw">🇰🇪 Kiswahili</option>
+                        <option value="lg">🇺🇬 Luganda</option>
+                        <option value="fj">🇫🇯 Vosa Vakaviti</option>
+                        <option value="tpi">🇵🇬 Tok Pisin</option>
+                    </select>
+                </div>
+            </div>
+
             <h1 data-translate="app_title">Global Dengue Tracker</h1>
             
-            <!-- 국가 선택 -->
-            <div class="country-selector">
-                <select id="countrySelect">
-                    <option value="bangladesh">🇧🇩 Bangladesh</option>
-                    <option value="nigeria">🇳🇬 Nigeria</option>
-                    <option value="brazil">🇧🇷 Brazil</option>
-                    <option value="thailand">🇹🇭 Thailand</option>
-                    <option value="indonesia">🇮🇩 Indonesia</option>
-                    <option value="philippines">🇵🇭 Philippines</option>
-                    <option value="india">🇮🇳 India</option>
-                    <option value="vietnam">🇻🇳 Vietnam</option>
-                    <option value="malaysia">🇲🇾 Malaysia</option>
-                    <option value="sri_lanka">🇱🇰 Sri Lanka</option>
-                </select>
-            </div>
-            
-            <!-- 언어 선택 -->
-            <div class="language-selector">
-                <button data-lang="en" class="lang-btn active">EN</button>
-                <button data-lang="local" class="lang-btn" id="localLangBtn">বাং</button>
-            </div>
+            <button id="authButton" class="auth-button">
+                <span id="authButtonText" data-translate="login">Login</span>
+            </button>
         </div>
     </header>
 
+    <!-- 회원가입/로그인 모달 -->
+    <div id="authModal" class="auth-modal" style="display: none;">
+        <div class="auth-modal-content">
+            <span class="auth-close">&times;</span>
+            
+            <div id="loginForm" class="auth-form">
+                <h2 data-translate="login_title">Login / Sign Up</h2>
+                
+                <!-- 소셜 로그인 버튼들 -->
+                <div class="social-login">
+                    <button id="googleLogin" class="social-btn google-btn">
+                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google">
+                        <span data-translate="google_login">Continue with Google</span>
+                    </button>
+                    
+                    <button id="appleLogin" class="social-btn apple-btn">
+                        🍎 <span data-translate="apple_login">Continue with Apple</span>
+                    </button>
+                </div>
+                
+                <div class="divider">
+                    <span data-translate="or">OR</span>
+                </div>
+                
+                <!-- 이메일 로그인 -->
+                <div class="email-auth">
+                    <input type="email" id="authEmail" placeholder="Email" data-translate="email_placeholder">
+                    <input type="password" id="authPassword" placeholder="Password" data-translate="password_placeholder">
+                    
+                    <button id="emailLogin" class="auth-btn" data-translate="login_btn">Login</button>
+                    <button id="emailSignup" class="auth-btn secondary" data-translate="signup_btn">Sign Up</button>
+                </div>
+            </div>
+            
+            <!-- 로그인 후 프로필 -->
+            <div id="userProfile" class="user-profile" style="display: none;">
+                <div class="profile-info">
+                    <img id="userPhoto" src="" alt="Profile">
+                    <div>
+                        <h3 id="userName"></h3>
+                        <p id="userEmail"></p>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="auth-btn" data-translate="logout_btn">Logout</button>
+            </div>
+        </div>
+    </div>
+    
     <!-- 메인 콘텐츠 -->
     <main>
-        <!-- 국가 정보 표시 -->
-        <div class="country-info">
-            <h2 id="currentCountryName">Bangladesh</h2>
-            <p data-translate="country_desc">Dengue fever prevention facilities</p>
+    <div class="main-layout">
+        <!-- 왼쪽 광고 -->
+        <div class="ad-left">
+            <h3>Advertisement</h3>
+            <div class="ad-placeholder">Google AdSense<br>Left Banner</div>
+            <div class="ad-placeholder">Sponsor<br>Area</div>
         </div>
 
-        <!-- 필터 버튼 -->
-        <div class="filter-container">
-            <button data-filter="all" class="filter-btn active" data-translate="filter_all">All</button>
-            <button data-filter="vaccine" class="filter-btn" data-translate="filter_vaccine">💉 Vaccination</button>
-            <button data-filter="blood_test" class="filter-btn" data-translate="filter_blood">🩸 Blood Test</button>
-            <button data-filter="aid" class="filter-btn" data-translate="filter_aid">⛑️ Free Clinic</button>
-            <button data-filter="dengue_center" class="filter-btn" data-translate="filter_center">🏥 Dengue Center</button>
+        <!-- 메인 콘텐츠 -->
+        <div class="content-area">
+            <!-- 국가 정보 표시 -->
+            <div class="country-info">
+                <h2 id="currentCountryName">Bangladesh</h2>
+                <p data-translate="country_desc">Dengue fever prevention facilities</p>
+            </div>
+
+            <!-- 필터 버튼 -->
+            <div class="filter-container">
+                <button data-filter="all" class="filter-btn active" data-translate="filter_all">All</button>
+                <button data-filter="vaccine" class="filter-btn" data-translate="filter_vaccine">💉 Vaccination</button>
+                <button data-filter="blood_test" class="filter-btn" data-translate="filter_blood">🩸 Blood Test</button>
+                <button data-filter="aid" class="filter-btn" data-translate="filter_aid">⛑️ Free Clinic</button>
+                <button data-filter="dengue_center" class="filter-btn" data-translate="filter_center">🏥 Dengue Center</button>
+            </div>
+
+            <!-- 지도 컨테이너 -->
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+
+            <!-- 로딩 표시 -->
+            <div id="loading" class="loading">
+                <p data-translate="loading">Loading facilities...</p>
+            </div>
         </div>
 
-        <!-- 지도 컨테이너 -->
-        <div class="map-container">
-            <div id="map"></div>
-        </div>
-
-        <!-- 로딩 표시 -->
-        <div id="loading" class="loading">
-            <p data-translate="loading">Loading facilities...</p>
-        </div>
+             <!-- 오른쪽 광고 -->
+            <div class="ad-right">
+                <h3>Advertisement</h3>
+                <div class="ad-placeholder">Google AdSense<br>Right Banner</div>
+                  <div class="ad-placeholder">Sponsor<br>Area</div>
+               </div>
+            </div>
     </main>
+
+    <!-- 푸터 제보 시스템 -->
+    <footer class="report-section">
+        <div class="container">
+            <h3 data-translate="report_title">Share Dengue-Related Location</h3>
+            
+            <form id="reportForm" class="report-form">
+                <!-- 이메일 입력 -->
+                <div class="form-group">
+                    <label data-translate="email">Email</label>
+                    <input type="email" id="reportEmail" required>
+                </div>
+                
+                <!-- 국가 선택 -->
+                <div class="form-group">
+                    <label data-translate="country">Country</label>
+                    <select id="reportCountry" required>
+                        <option value="">Select Country</option>
+                        <option value="bangladesh">Bangladesh</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="philippines">Philippines</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="laos">Laos</option>
+                        <option value="cambodia">Cambodia</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="india">India</option>
+                        <option value="sri_lanka">Sri Lanka</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="venezuela">Venezuela</option>
+                        <option value="peru">Peru</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="tanzania">Tanzania</option>
+                        <option value="uganda">Uganda</option>
+                        <option value="australia">Australia</option>
+                        <option value="fiji">Fiji</option>
+                        <option value="papua_new_guinea">Papua New Guinea</option>
+                    </select>
+                </div>
+                
+                <!-- 시설 타입 -->
+                <div class="form-group">
+                    <label data-translate="facility_type">Facility Type</label>
+                    <select id="reportType" required>
+                        <option value="vaccine">💉 Vaccination Center</option>
+                        <option value="blood_test">🩸 Blood Test Center</option>
+                        <option value="aid">⛑️ Treatment Center</option>
+                        <option value="ngo">🏥 NGO</option>
+                        <option value="other">📍 Other</option>
+                    </select>
+                </div>
+                
+                <!-- 내용 작성 -->
+                <div class="form-group">
+                    <label data-translate="description">Description</label>
+                    <textarea id="reportText" rows="4" required placeholder="Please describe the location, address, and services..."></textarea>
+                </div>
+                
+                <!-- 파일 첨부 -->
+                <div class="form-group">
+                    <label data-translate="attachment">Attachment (Optional)</label>
+                    <input type="file" id="reportFile" accept="image/*,.pdf,.doc,.docx">
+                </div>
+                
+                <button type="submit" class="submit-btn" data-translate="submit_report">📤 Submit Report</button>
+            </form>
+        </div>
+    </footer>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Cluster JS -->
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <!-- Firebase -->
-    <script src="js/firebase-app-compat.js"></script>
-    <script src="js/firebase-firestore-compat.js"></script>
-    <!-- 메인 앱 -->
-    <script src="app/js/global-app.js"></script>
+    <!-- Firebase (app/js 폴더에 있음) -->
+    <script src="app/js/firebase-app-compat.js"></script>
+    <script src="app/js/firebase-firestore-compat.js"></script>
+    <!-- 글로벌 앱 (js 폴더에 있음) -->
+    <script src="js/global-app.js"></script>
 </body>
 </html>

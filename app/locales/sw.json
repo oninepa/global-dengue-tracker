@@ -1,0 +1,19 @@
+{
+  "app_title": "Kufuatilia Homa ya Damu Duniani",
+  "country_desc": "Vituo vya kuzuia homa ya damu",
+  "filter_all": "Zote",
+  "filter_vaccine": "Chanjo",
+  "filter_blood": "Uchunguzi wa Damu",
+  "filter_aid": "Kliniki ya Bure",
+  "filter_center": "Kituo cha Homa ya Damu",
+  "loading": "Inapakia vituo...",
+  "report_title": "Shiriki Mahali Palipohusiana na Homa ya Damu",
+  "email": "Barua pepe",
+  "country": "Nchi",
+  "facility_type": "Aina ya Kituo",
+  "description": "Maelezo",
+  "description_placeholder": "Tafadhali eleza mahali, anwani na huduma...",
+  "attachment": "Kiambatisho",
+  "submit_report": "Tuma Ripoti",
+  "select_country": "Chagua Nchi"
+}

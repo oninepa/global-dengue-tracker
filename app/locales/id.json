@@ -1,0 +1,19 @@
+{
+  "app_title": "Pelacak Demam Berdarah Global",
+  "country_desc": "Fasilitas pencegahan demam berdarah",
+  "filter_all": "Semua",
+  "filter_vaccine": "Vaksinasi",
+  "filter_blood": "Tes Darah",
+  "filter_aid": "Klinik Gratis",
+  "filter_center": "Pusat Demam Berdarah",
+  "loading": "Memuat fasilitas...",
+  "report_title": "Bagikan Lokasi Terkait Demam Berdarah",
+  "email": "Email",
+  "country": "Negara",
+  "facility_type": "Jenis Fasilitas",
+  "description": "Deskripsi",
+  "description_placeholder": "Harap jelaskan lokasi, alamat, dan layanan...",
+  "attachment": "Lampiran",
+  "submit_report": "Kirim Laporan",
+  "select_country": "Pilih Negara"
+}

@@ -1,0 +1,19 @@
+{
+  "app_title": "Global Dengue Tracker",
+  "country_desc": "Mga pasilidad sa pagpigil ng dengue",
+  "filter_all": "Lahat",
+  "filter_vaccine": "Pagbabakuna",
+  "filter_blood": "Pagsusuri ng Dugo",
+  "filter_aid": "Libreng Klinika",
+  "filter_center": "Dengue Center",
+  "loading": "Naglo-load ng mga pasilidad...",
+  "report_title": "Magbahagi ng Lokasyon na Kaugnay ng Dengue",
+  "email": "Email",
+  "country": "Bansa",
+  "facility_type": "Uri ng Pasilidad",
+  "description": "Paglalarawan",
+  "description_placeholder": "Pakipaliwanag ang lokasyon, address, at mga serbisyo...",
+  "attachment": "Attachment",
+  "submit_report": "Ipadala ang Ulat",
+  "select_country": "Pumili ng Bansa"
+}

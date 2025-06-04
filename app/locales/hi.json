@@ -1,0 +1,19 @@
+{
+  "app_title": "ग्लोबल डेंगू ट्रैकर",
+  "country_desc": "डेंगू बुखार रोकथाम सुविधाएं",
+  "filter_all": "सभी",
+  "filter_vaccine": "टीकाकरण",
+  "filter_blood": "रक्त परीक्षण",
+  "filter_aid": "मुफ्त क्लिनिक",
+  "filter_center": "डेंगू केंद्र",
+  "loading": "सुविधाएं लोड हो रही हैं...",
+  "report_title": "डेंगू संबंधित स्थान साझा करें",
+  "email": "ईमेल",
+  "country": "देश",
+  "facility_type": "सुविधा प्रकार",
+  "description": "विवरण",
+  "description_placeholder": "कृपया स्थान, पता और सेवाओं का वर्णन करें...",
+  "attachment": "अनुलग्नक",
+  "submit_report": "रिपोर्ट जमा करें",
+  "select_country": "देश चुनें"
+}

@@ -5,7 +5,7 @@ from firebase_admin import credentials, firestore
 # Firebase 서비스 계정 키 파일 경로
 cred_path = r"C:\oninepawork\project\bangdeng\bangdeng-key.json"
 # CSV 파일 경로
-csv_path = r"C:\oninepawork\project\bangdeng\data\sample_data.csv"
+csv_path = r"C:\oninepawork\project\bangdeng\data\papua_new_guinea_facilities.csv"
 
 # Firebase 앱 초기화 (이미 초기화된 경우 건너뛰기)
 if not firebase_admin._apps:
@@ -13,7 +13,7 @@ if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-collection_name = "locations" # 컬렉션 이름
+collection_name = "papua_new_guinea_locations" # 컬렉션 이름
 
 print(f"'{csv_path}' 파일에서 데이터를 읽어 '{collection_name}' 컬렉션으로 업로드를 시작합니다.")
 

@@ -1,12 +1,13 @@
 {
-  "app_title": "Global Dengue Tracker",
-  "country_desc": "Dengue fever prevention facilities",
-  "filter_all": "All",
-  "filter_vaccine": "Vaccination",
-  "filter_blood": "Blood Test",
-  "filter_aid": "Free Clinic",
-  "filter_center": "Dengue Center",
-  "loading": "Loading facilities...",
+  "app_title": "Omukuumi gw'Omusujja gw'Ensi Yonna",
+  "country_desc": "Ebifo ebiziyiza omusujja gw'amalaso",
+  "filter_all": "Byonna",
+  "filter_vaccine": "Okufuuyirwa",
+  "filter_blood": "Okukebera Omusaayi",
+  "filter_aid": "Eddwaliro ly'Obwereere",
+  "filter_center": "Ekitongole ky'Omusujja",
+  "loading": "Tukuuma ebifo...",
+
   "report_title": "Share Dengue-Related Location",
   "email": "Email",
   "country": "Country",
@@ -17,11 +18,3 @@
   "submit_report": "Submit Report",
   "select_country": "Select Country"
 }
-
-
-
-
-
-
-
-

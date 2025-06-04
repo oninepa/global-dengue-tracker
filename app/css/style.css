@@ -14,47 +14,261 @@ body {
 
 /* 헤더 스타일 */
 header {
-    background-color: #4285f4;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 0;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
 }
 
-.language-selector button {
-    background: none;
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-content h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.country-selector select,
+.language-selector select {
+    background: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
     color: white;
-    padding: 0.3rem 0.6rem;
-    margin-left: 0.5rem;
-    border-radius: 3px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    min-width: 150px;
+    font-size: 14px;
+}
+
+.country-selector select option,
+.language-selector select option {
+    background: #333;
+    color: white;
+}
+
+/* 로그인 버튼 */
+.auth-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 100px;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* 회원가입/로그인 모달 */
+.auth-modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.auth-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.auth-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 28px;
     cursor: pointer;
 }
 
-.language-selector button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.social-login {
+    margin-bottom: 20px;
 }
 
-/* 메인 콘텐츠 */
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.google-btn:hover {
+    background: #f8f9fa;
+}
+
+.apple-btn {
+    background: #000;
+    color: white;
+}
+
+.apple-btn:hover {
+    background: #333;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider span {
+    background: white;
+    padding: 0 15px;
+    color: #666;
+}
+
+.email-auth input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-btn.secondary {
+    background: #6c757d;
+}
+
+.auth-btn:hover {
+    opacity: 0.9;
+}
+
+.user-profile {
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* 메인 콘텐츠 - 3단 레이아웃 */
 main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-.map-container {
-    height: 60vh;
-    min-height: 80px;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.main-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 20px;
+    align-items: start;
 }
 
-#map {
-    height: 100%;
-    width: 100%;
+/* 광고 영역 */
+.ad-left, .ad-right {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    min-height: 600px;
+    position: sticky;
+    top: 20px;
+}
+
+.ad-left h3, .ad-right h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.ad-placeholder {
+    background: #e9ecef;
+    height: 250px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* 메인 콘텐츠 영역 */
+.content-area {
+    min-height: 600px;
+}
+
+/* 국가 정보 */
+.country-info {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.country-info h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
 /* 필터 버튼 */
@@ -63,20 +277,41 @@ main {
     flex-wrap: wrap;
     margin-bottom: 1rem;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .filter-container button {
     background-color: #f1f3f4;
     border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    padding: 0.8rem 1.5rem;
     cursor: pointer;
     font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-container button:hover {
+    background-color: #e1e3e4;
 }
 
 .filter-container button.active {
     background-color: #4285f4;
     color: white;
+}
+
+/* 지도 컨테이너 - 크기 축소 */
+.map-container {
+    height: 45vh;
+    min-height: 350px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    height: 100%;
+    width: 100%;
 }
 
 /* 커스텀 마커 스타일 */
@@ -97,92 +332,6 @@ main {
 .blood-marker { border-color: #9b59b6; }
 .aid-marker { border-color: #f39c12; }
 
-/* 위치 목록 */
-.location-list {
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.location-item {
-    border-bottom: 1px solid #eee;
-    padding: 0.8rem 0;
-}
-
-.location-item:last-child {
-    border-bottom: none;
-}
-
-.location-name {
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-}
-
-.location-address, .location-contact {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.loading {
-    text-align: center;
-    color: #777;
-}
-
-/* 푸터 */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f1f3f4;
-    color: #666;
-    font-size: 0.8rem;
-    margin-top: 2rem;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .map-container {
-        height: 50vh;
-    }
-}
-/* 기존 스타일에 추가 */
-
-/* 헤더 개선 */
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-/* 국가 선택 */
-.country-selector select {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid white;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.country-selector select option {
-    background: #4285f4;
-    color: white;
-}
-
-/* 국가 정보 */
-.country-info {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.country-info h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
 /* 로딩 */
 .loading {
     text-align: center;
@@ -191,20 +340,170 @@ footer {
     display: none;
 }
 
-/* 언어 버튼 개선 */
-.lang-btn.active {
-    background-color: rgba(255, 255, 255, 0.3);
+/* 푸터 제보 시스템 */
+.report-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
 }
 
-/* 반응형 헤더 */
+.report-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.report-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .main-layout {
+        grid-template-columns: 150px 1fr 150px;
+        gap: 15px;
+    }
+    
+    .ad-left, .ad-right {
+        padding: 15px;
+        min-height: 400px;
+    }
+    
+    .ad-placeholder {
+        height: 150px;
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .ad-left, .ad-right {
+        display: none;
+    }
+    
     .header-content {
         flex-direction: column;
+        gap: 15px;
         text-align: center;
     }
     
-    .country-selector,
-    .language-selector {
-        margin: 0.5rem 0;
+    .header-content h1 {
+        position: static;
+        transform: none;
+        order: 1;
+    }
+    
+    .header-controls {
+        order: 2;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .auth-button {
+        order: 3;
+        margin-top: 10px;
+    }
+    
+    .map-container {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .filter-container {
+        justify-content: center;
+    }
+    
+    .filter-container button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .report-form {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .report-section h3 {
+        font-size: 20px;
+    }
+    
+    .country-selector select,
+    .language-selector select {
+        min-width: 120px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.4rem;
+    }
+    
+    .filter-container {
+        gap: 0.3rem;
+    }
+    
+    .filter-container button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.7rem;
     }
 }

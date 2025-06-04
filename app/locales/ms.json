@@ -1,0 +1,19 @@
+{
+  "app_title": "Penjejak Denggi Global",
+  "country_desc": "Kemudahan pencegahan demam denggi",
+  "filter_all": "Semua",
+  "filter_vaccine": "Vaksinasi",
+  "filter_blood": "Ujian Darah",
+  "filter_aid": "Klinik Percuma",
+  "filter_center": "Pusat Denggi",
+  "loading": "Memuatkan kemudahan...",
+  "report_title": "Kongsi Lokasi Berkaitan Denggi",
+  "email": "Email",
+  "country": "Negara",
+  "facility_type": "Jenis Kemudahan",
+  "description": "Penerangan",
+  "description_placeholder": "Sila terangkan lokasi, alamat, dan perkhidmatan...",
+  "attachment": "Lampiran",
+  "submit_report": "Hantar Laporan",
+  "select_country": "Pilih Negara"
+}

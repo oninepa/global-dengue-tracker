@@ -1,12 +1,13 @@
 {
   "app_title": "Global Dengue Tracker",
-  "country_desc": "Dengue fever prevention facilities",
-  "filter_all": "All",
-  "filter_vaccine": "Vaccination",
-  "filter_blood": "Blood Test",
-  "filter_aid": "Free Clinic",
-  "filter_center": "Dengue Center",
-  "loading": "Loading facilities...",
+  "country_desc": "Na noda ni vakararavi kina na mate ni dengue",
+  "filter_all": "Kece",
+  "filter_vaccine": "Vakatubu",
+  "filter_blood": "Vakadreketaki na Dra",
+  "filter_aid": "Vale ni Bose Savasava",
+  "filter_center": "Vale ni Dengue",
+  "loading": "Sa vakayagataki na noda...",
+
   "report_title": "Share Dengue-Related Location",
   "email": "Email",
   "country": "Country",
@@ -17,11 +18,3 @@
   "submit_report": "Submit Report",
   "select_country": "Select Country"
 }
-
-
-
-
-
-
-
-

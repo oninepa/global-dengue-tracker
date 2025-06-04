@@ -1,0 +1,19 @@
+{
+  "app_title": "گلوبل ڈینگو ٹریکر",
+  "country_desc": "ڈینگو بخار کی روک تھام کی سہولات",
+  "filter_all": "تمام",
+  "filter_vaccine": "ویکسینیشن",
+  "filter_blood": "خون کا ٹیسٹ",
+  "filter_aid": "مفت کلینک",
+  "filter_center": "ڈینگو سینٹر",
+  "loading": "سہولات لوڈ ہو رہی ہیں...",
+  "report_title": "ڈینگو سے متعلق مقام شیئر کریں",
+  "email": "ای میل",
+  "country": "ملک",
+  "facility_type": "سہولت کی قسم",
+  "description": "تفصیل",
+  "description_placeholder": "براہ کرم مقام، پتہ اور خدمات کی وضاحت کریں...",
+  "attachment": "منسلکہ",
+  "submit_report": "رپورٹ جمع کریں",
+  "select_country": "ملک منتخب کریں"
+}

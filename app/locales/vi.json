@@ -1,0 +1,19 @@
+{
+  "app_title": "Trình Theo Dõi Sốt Xuất Huyết Toàn Cầu",
+  "country_desc": "Cơ sở phòng chống sốt xuất huyết",
+  "filter_all": "Tất cả",
+  "filter_vaccine": "Tiêm chủng",
+  "filter_blood": "Xét nghiệm máu",
+  "filter_aid": "Phòng khám miễn phí",
+  "filter_center": "Trung tâm sốt xuất huyết",
+  "loading": "Đang tải cơ sở...",
+  "report_title": "Chia sẻ địa điểm liên quan đến sốt xuất huyết",
+  "email": "Email",
+  "country": "Quốc gia",
+  "facility_type": "Loại cơ sở",
+  "description": "Mô tả",
+  "description_placeholder": "Vui lòng mô tả địa điểm, địa chỉ và dịch vụ...",
+  "attachment": "Tệp đính kèm",
+  "submit_report": "Gửi báo cáo",
+  "select_country": "Chọn quốc gia"
+}

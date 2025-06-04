@@ -1,12 +1,13 @@
 {
-  "app_title": "Global Dengue Tracker",
-  "country_desc": "Dengue fever prevention facilities",
-  "filter_all": "All",
-  "filter_vaccine": "Vaccination",
-  "filter_blood": "Blood Test",
-  "filter_aid": "Free Clinic",
-  "filter_center": "Dengue Center",
-  "loading": "Loading facilities...",
+  "app_title": "全球登革热追踪器",
+  "country_desc": "登革热预防设施",
+  "filter_all": "全部",
+  "filter_vaccine": "疫苗接种",
+  "filter_blood": "血液检测",
+  "filter_aid": "免费诊所",
+  "filter_center": "登革热中心",
+  "loading": "正在加载设施...",
+
   "report_title": "Share Dengue-Related Location",
   "email": "Email",
   "country": "Country",
@@ -17,11 +18,3 @@
   "submit_report": "Submit Report",
   "select_country": "Select Country"
 }
-
-
-
-
-
-
-
-
