@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bangdeng - 방글라데시 댕기열 정보 지도
 
 방글라데시 지역의 댕기열 백신 접종 병원과 약국 위치를 보여주는 Progressive Web App(PWA)입니다.
@@ -36,3 +37,7 @@
 ## 라이센스
 
 MIT
+=======
+# bangdeng
+방글라데시 뎅기열 정보 제공 PWA
+>>>>>>> 2e87820bfc798bb1443c05ecd60f82dc01aa7e49
