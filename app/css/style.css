@@ -12,7 +12,7 @@ body {
     background-color: #f8f9fa;
 }
 
-/* 헤더 스타일 */
+/* 헤더 스타일 수정 */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 15px 0;
@@ -20,29 +20,54 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* 세로 배치로 변경 */
     align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    position: relative;
+    gap: 15px;
 }
 
-.header-controls {
+/* 제목과 로그인 버튼을 가로로 배치 */
+.header-top {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .header-content h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     margin: 0;
     color: white;
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.auth-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 100px;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* 국가/언어 선택을 제목 아래로 */
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .country-selector select,
@@ -60,25 +85,6 @@ header {
 .language-selector select option {
     background: #333;
     color: white;
-}
-
-/* 로그인 버튼 */
-.auth-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    min-width: 100px;
-    transition: all 0.3s ease;
-}
-
-.auth-button:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
 }
 
 /* 회원가입/로그인 모달 */
@@ -210,53 +216,22 @@ header {
     border-radius: 50%;
 }
 
-/* 메인 콘텐츠 - 3단 레이아웃 */
+/* 메인 콘텐츠 - 중앙 정렬 및 최대 너비 설정 */
 main {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
+    width: 100%;
 }
 
 .main-layout {
-    display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    gap: 20px;
-    align-items: start;
+    width: 100%;
 }
 
-/* 광고 영역 */
-.ad-left, .ad-right {
-    background: #f8f9fa;
-    border: 2px dashed #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    color: #999;
-    min-height: 600px;
-    position: sticky;
-    top: 20px;
-}
-
-.ad-left h3, .ad-right h3 {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.ad-placeholder {
-    background: #e9ecef;
-    height: 250px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    font-size: 14px;
-    color: #6c757d;
-}
-
-/* 메인 콘텐츠 영역 */
 .content-area {
-    min-height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 국가 정보 */
@@ -299,21 +274,26 @@ main {
     color: white;
 }
 
-/* 지도 컨테이너 - 크기 축소 */
+/* 지도 컨테이너 - 반응형 크기 */
 .map-container {
-    height: 45vh;
-    min-height: 350px;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
     margin-bottom: 1rem;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* 추가 */
+    z-index: 1; /* 추가 */
 }
 
 #map {
-    height: 100%;
-    width: 100%;
+    height: 100% !important;
+    width: 100% !important;
+    position: relative; /* 추가 */
+    z-index: 1; /* 추가 */
 }
-
 /* 커스텀 마커 스타일 */
 .custom-marker {
     background: white;
@@ -332,6 +312,37 @@ main {
 .blood-marker { border-color: #9b59b6; }
 .aid-marker { border-color: #f39c12; }
 
+/* 지도 밑 광고 */
+.ad-bottom {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    margin: 20px 0;
+    min-height: 200px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.ad-bottom h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #666;
+}
+
+.ad-placeholder-horizontal {
+    background: #e9ecef;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #6c757d;
+}
+
 /* 로딩 */
 .loading {
     text-align: center;
@@ -346,6 +357,13 @@ main {
     color: white;
     padding: 40px 20px;
     margin-top: 50px;
+    width: 100%;
+}
+
+.report-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .report-section h3 {
@@ -353,6 +371,7 @@ main {
     margin-bottom: 30px;
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 .report-form {
@@ -362,6 +381,8 @@ main {
     padding: 30px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group {
@@ -373,6 +394,7 @@ main {
     margin-bottom: 8px;
     font-weight: bold;
     color: #fff;
+    font-size: 16px;
 }
 
 .form-group input,
@@ -385,6 +407,7 @@ main {
     font-size: 16px;
     background: rgba(255, 255, 255, 0.9);
     box-sizing: border-box;
+    color: #333;
 }
 
 .form-group input:focus,
@@ -392,6 +415,17 @@ main {
 .form-group textarea:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: white;
+}
+
+.form-group select option {
+    background: white;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 .submit-btn {
@@ -405,6 +439,7 @@ main {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
@@ -413,63 +448,20 @@ main {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 1024px) {
-    .main-layout {
-        grid-template-columns: 150px 1fr 150px;
-        gap: 15px;
-    }
-    
-    .ad-left, .ad-right {
-        padding: 15px;
-        min-height: 400px;
-    }
-    
-    .ad-placeholder {
-        height: 150px;
-        font-size: 12px;
-    }
-}
-
 @media (max-width: 768px) {
-    .main-layout {
-        grid-template-columns: 1fr;
+    .header-top {
+        flex-direction: column;
         gap: 10px;
     }
     
-    .ad-left, .ad-right {
-        display: none;
-    }
-    
-    .header-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .header-content h1 {
-        position: static;
-        transform: none;
-        order: 1;
-    }
-    
     .header-controls {
-        order: 2;
         flex-wrap: wrap;
         justify-content: center;
     }
     
-    .auth-button {
-        order: 3;
-        margin-top: 10px;
-    }
-    
     .map-container {
-        height: 40vh;
+        height: 50vh;
         min-height: 300px;
-    }
-    
-    .filter-container {
-        justify-content: center;
     }
     
     .filter-container button {
@@ -477,8 +469,18 @@ main {
         font-size: 0.8rem;
     }
     
+    .country-selector select,
+    .language-selector select {
+        min-width: 120px;
+        font-size: 12px;
+    }
+    
+    .report-section {
+        padding: 30px 15px;
+    }
+    
     .report-form {
-        padding: 20px;
+        padding: 20px 15px;
         margin: 0 10px;
     }
     
@@ -486,10 +488,16 @@ main {
         font-size: 20px;
     }
     
-    .country-selector select,
-    .language-selector select {
-        min-width: 120px;
-        font-size: 12px;
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px;
     }
 }
 
@@ -505,5 +513,18 @@ main {
     .filter-container button {
         padding: 0.5rem 0.8rem;
         font-size: 0.7rem;
+    }
+    
+    .report-section {
+        padding: 20px 10px;
+    }
+    
+    .report-form {
+        padding: 15px 10px;
+        margin: 0 5px;
+    }
+    
+    .report-section h3 {
+        font-size: 18px;
     }
 }

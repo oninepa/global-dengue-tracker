@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Dengue Tracker</title>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -17,11 +17,20 @@
 <body>
     <!-- 헤더 -->
     <header>
-        <div class="header-content">
-            <div class="header-controls">
-                <div class="country-selector">
-                    <select id="countrySelect">
-                        <option value="bangladesh">🇧🇩 Bangladesh</option>
+    <div class="header-content">
+        <!-- 제목과 로그인 버튼 -->
+        <div class="header-top">
+            <h1 data-translate="app_title">Global Dengue Tracker</h1>
+            <button id="authButton" class="auth-button">
+                <span id="authButtonText" data-translate="login">Login</span>
+            </button>
+        </div>
+        
+        <!-- 국가/언어 선택 (제목 아래) -->
+        <div class="header-controls">
+            <div class="country-selector">
+                <select id="countrySelect">
+                     <option value="bangladesh">🇧🇩 Bangladesh</option>
                         <option value="thailand">🇹🇭 Thailand</option>
                         <option value="vietnam">🇻🇳 Vietnam</option>
                         <option value="indonesia">🇮🇩 Indonesia</option>
@@ -47,13 +56,12 @@
                         <option value="uganda">🇺🇬 Uganda</option>
                         <option value="australia">🇦🇺 Australia</option>
                         <option value="fiji">🇫🇯 Fiji</option>
-                        <option value="papua_new_guinea">🇵🇬 Papua New Guinea</option>
-                    </select>
-                </div>
-                
-                <div class="language-selector">
-                    <select id="languageSelect">
-                        <option value="en">🇺🇸 English</option>
+                </select>
+            </div>
+            
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">🇺🇸 English</option>
                         <option value="ko">🇰🇷 한국어</option>
                         <option value="bn">🇧🇩 বাংলা</option>
                         <option value="th">🇹🇭 ไทย</option>
@@ -75,17 +83,11 @@
                         <option value="lg">🇺🇬 Luganda</option>
                         <option value="fj">🇫🇯 Vosa Vakaviti</option>
                         <option value="tpi">🇵🇬 Tok Pisin</option>
-                    </select>
-                </div>
+                </select>
             </div>
-
-            <h1 data-translate="app_title">Global Dengue Tracker</h1>
-            
-            <button id="authButton" class="auth-button">
-                <span id="authButtonText" data-translate="login">Login</span>
-            </button>
         </div>
-    </header>
+     </div>
+     </header>
 
     <!-- 회원가입/로그인 모달 -->
     <div id="authModal" class="auth-modal" style="display: none;">
@@ -138,13 +140,6 @@
     <!-- 메인 콘텐츠 -->
     <main>
     <div class="main-layout">
-        <!-- 왼쪽 광고 -->
-        <div class="ad-left">
-            <h3>Advertisement</h3>
-            <div class="ad-placeholder">Google AdSense<br>Left Banner</div>
-            <div class="ad-placeholder">Sponsor<br>Area</div>
-        </div>
-
         <!-- 메인 콘텐츠 -->
         <div class="content-area">
             <!-- 국가 정보 표시 -->
@@ -167,39 +162,40 @@
                 <div id="map"></div>
             </div>
 
+            <!-- 지도 밑 가로 광고 -->
+            <div class="ad-bottom">
+                <h3>Advertisement</h3>
+                <div class="ad-placeholder-horizontal">
+                    Google AdSense - Horizontal Banner (728x90 or 970x250)
+                </div>
+            </div>
+
             <!-- 로딩 표시 -->
             <div id="loading" class="loading">
                 <p data-translate="loading">Loading facilities...</p>
             </div>
         </div>
-
-             <!-- 오른쪽 광고 -->
-            <div class="ad-right">
-                <h3>Advertisement</h3>
-                <div class="ad-placeholder">Google AdSense<br>Right Banner</div>
-                  <div class="ad-placeholder">Sponsor<br>Area</div>
-               </div>
+    </div>
+</main>
+    
+<!-- 푸터 제보 시스템 -->
+<footer class="report-section">
+    <div class="container">
+        <h3 data-translate="report_title">Share Dengue-Related Location</h3>
+        
+        <form id="reportForm" class="report-form">
+            <!-- 이메일 입력 -->
+            <div class="form-group">
+                <label data-translate="email">Email</label>
+                <input type="email" id="reportEmail" required>
             </div>
-    </main>
-
-    <!-- 푸터 제보 시스템 -->
-    <footer class="report-section">
-        <div class="container">
-            <h3 data-translate="report_title">Share Dengue-Related Location</h3>
             
-            <form id="reportForm" class="report-form">
-                <!-- 이메일 입력 -->
-                <div class="form-group">
-                    <label data-translate="email">Email</label>
-                    <input type="email" id="reportEmail" required>
-                </div>
-                
-                <!-- 국가 선택 -->
-                <div class="form-group">
-                    <label data-translate="country">Country</label>
-                    <select id="reportCountry" required>
-                        <option value="">Select Country</option>
-                        <option value="bangladesh">Bangladesh</option>
+            <!-- 국가 선택 -->
+            <div class="form-group">
+                <label data-translate="country">Country</label>
+                <select id="reportCountry" required>
+                    <option value="">Select Country</option>
+                     <option value="bangladesh">Bangladesh</option>
                         <option value="thailand">Thailand</option>
                         <option value="vietnam">Vietnam</option>
                         <option value="indonesia">Indonesia</option>
@@ -226,46 +222,45 @@
                         <option value="australia">Australia</option>
                         <option value="fiji">Fiji</option>
                         <option value="papua_new_guinea">Papua New Guinea</option>
-                    </select>
-                </div>
-                
-                <!-- 시설 타입 -->
-                <div class="form-group">
-                    <label data-translate="facility_type">Facility Type</label>
-                    <select id="reportType" required>
-                        <option value="vaccine">💉 Vaccination Center</option>
-                        <option value="blood_test">🩸 Blood Test Center</option>
-                        <option value="aid">⛑️ Treatment Center</option>
-                        <option value="ngo">🏥 NGO</option>
-                        <option value="other">📍 Other</option>
-                    </select>
-                </div>
-                
-                <!-- 내용 작성 -->
-                <div class="form-group">
-                    <label data-translate="description">Description</label>
-                    <textarea id="reportText" rows="4" required placeholder="Please describe the location, address, and services..."></textarea>
-                </div>
-                
-                <!-- 파일 첨부 -->
-                <div class="form-group">
-                    <label data-translate="attachment">Attachment (Optional)</label>
-                    <input type="file" id="reportFile" accept="image/*,.pdf,.doc,.docx">
-                </div>
-                
-                <button type="submit" class="submit-btn" data-translate="submit_report">📤 Submit Report</button>
-            </form>
-        </div>
-    </footer>
-
-    <!-- Leaflet JS -->
+                </select>
+            </div>
+            
+            <!-- 시설 타입 -->
+            <div class="form-group">
+                <label data-translate="facility_type">Facility Type</label>
+                <select id="reportType" required>
+                    <option value="vaccine">💉 Vaccination Center</option>
+                    <option value="blood_test">🩸 Blood Test Center</option>
+                    <option value="aid">⛑️ Treatment Center</option>
+                    <option value="ngo">🏥 NGO</option>
+                    <option value="other">📍 Other</option>
+                </select>
+            </div>
+            
+            <!-- 내용 작성 -->
+            <div class="form-group">
+                <label data-translate="description">Description</label>
+                <textarea id="reportText" rows="4" required placeholder="Please describe the location, address, and services..."></textarea>
+            </div>
+            
+            <!-- 파일 첨부 -->
+            <div class="form-group">
+                <label data-translate="attachment">Attachment (Optional)</label>
+                <input type="file" id="reportFile" accept="image/*,.pdf,.doc,.docx">
+            </div>
+            
+            <button type="submit" class="submit-btn" data-translate="submit_report">📤 Submit Report</button>
+        </form>
+    </div>
+</footer>
+       <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Cluster JS -->
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <!-- Firebase (app/js 폴더에 있음) -->
+    <!-- Firebase -->
     <script src="app/js/firebase-app-compat.js"></script>
     <script src="app/js/firebase-firestore-compat.js"></script>
-    <!-- 글로벌 앱 (js 폴더에 있음) -->
+    <!-- Main App -->
     <script src="js/global-app.js"></script>
 </body>
 </html>
